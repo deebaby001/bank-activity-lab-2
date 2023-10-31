@@ -5,14 +5,18 @@ Credit to the [Data Science Working Group](http://datascience.codeforsanfrancisc
 Begin reading `instructions.md` to get started.
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+The purpose of this project is 1. Strip off the date at the beginning of the list.
+2.	Convert each string this is inside of the list into a float.
+3.	Calculate the average of this new list.
+4.	Take this average that was calculated and append it into the empty list "averages".
+
 
 ### Methods Used
 * Inferential Statistics
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
-* etc.
+* Prayer
 
 ### Technologies
 * R 
@@ -25,4 +29,4 @@ The purpose of this project is ________. (Describe the main goals of the project
 * etc. 
 
 ## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+Provide more detailed overview of the project. This project was an examination in understanding of coding concepts and the use of evaluation techniques to reinforce the skills obtained. It was challenging, yet, good.

@@ -1,46 +1,34 @@
 import csv
-from fileinput import filename
-from msilib.schema import SelfReg
-
 
 import time
 from datetime import datetime
 
-#from typing import Self
-#from isort import file
-
-from sklearn.semi_supervised import SelfTrainingClassifier
-
 
 class StockData:
-    def __init__(self, filename):
-        self.path = filename
+    def __init__(self, path):
+        self.path = path
         self.data = None
-        
-        #def load(self):
-        """A function to assign 
+
+    def load(self):
+        """A function to assing the csv dataset to a list of lists.
         Does not include headers.
+
         All data is expected to be a string
         """
-    def load(self, filename):
-            with open(filename, 'r') as f:
-                self = self.load(f)
-        #print(file)
-        
         # to keep us in compliance with EU standards, we must log the datetime
         # of all data loads
-    epoch = time.time()
-    SelfTrainingClassifier.date = datetime.utcfromtimestamp(epoch).\
+        epoch = time.time()
+        self._date = datetime.utcfromtimestamp(epoch).\
             strftime('%Y-%m-%d %H:%M:%S')
-    print("DATA LOADED AT", SelfTrainingClassifier.date)
+        print("DATA LOADED AT", self._date)
 
         # open data using csv reader
-    def read_csv(self):
-        with open(self.filename,'r') as file:
+        with open(self.path, newline='') as file:
             reader = csv.reader(file)
             # skip header row
-        next(reader, None)
+            next(reader, None)
             # append list of strings into list
-        for row in reader:
-                print(row)
+            self.data = []
+            for row in reader:
                 self.data.append(row)
+

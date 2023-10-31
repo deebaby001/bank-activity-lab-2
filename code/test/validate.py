@@ -18,19 +18,25 @@ while in the `code/test` folder to test the completeness of your code.
 
 The terminal output will tell you if your pipeline is successful.
 """
+#Code not working 
+
 import sys
+import os
+
+#Below I am trying to find the correct path and  package to load
+#from setuptools import find_packages, setup
 
 from code.StockMetrics import StockMetrics
 
-#from code.test.file_path import file_path 
+#from setuptools import setup, find_packages
 
-import os
+#setup(name = 'package_two', packages = find_packages())
 
-#import path
 
 # TODO: new import
+file_path = os.path.join('/data', 'raw', 'amzn.csv') #note the addition of the dot path
+metrics = StockMetrics(file_path)
 
-#from code StockMetrics.py; import StockMetrics
     
 OKGREEN = '\033[92m'
 FAIL = '\033[91m'
@@ -38,10 +44,7 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
-file_path = os.path.join("data", "raw", "amzn.csv")
-metrics = StockMetrics(file_path)
 
-#metrics = StockMetrics(r"data\raw\amzn.csv")
 
 def pt1():
     # try to compute average
@@ -114,3 +117,4 @@ if __name__ == "__main__":
             pt1()
             pt2()
             pt3()
+
